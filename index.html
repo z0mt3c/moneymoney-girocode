@@ -95,11 +95,12 @@
         setTimeout(() => {
           frozen = false
           requestAnimationFrame(tick)
-        }, 1500)
+        }, 3000)
       }
 
       function checkGiroCode (code) {
         if (!code) return
+        console.log(code)
 
         if (code.trim().indexOf('bank://singlepaymentsepa') === 0) {
           freeze()
