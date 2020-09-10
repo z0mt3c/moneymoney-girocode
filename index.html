@@ -115,7 +115,7 @@
             bic: lines[4],
             name: lines[5],
             iban: lines[6],
-            amount: lines[7],
+            amount: lines[7].replace(/([^0-9\.]+)/g, ''),
             reason: lines[10],
           })
         }
